@@ -31,6 +31,7 @@ The core of ScholHawk's intelligence lies in the PostgreSQL function: `get_match
     * **Citizenship Status:** Scholarship status is "Not specified", or the user's status is found within the scholarship's (potentially comma-separated) list.
 
     * **Academic Level:** Scholarship level is "Any", "Not specified", or it partially matches the user's academic level.
+---
 ### Bonus
 ### Relevance Scoring (`match_score`):
 The `match_score` in the `get_matching_scholarships(p_user_id UUID)` function calculates a scholarship's relevance to a user by combining three weighted factors:
@@ -58,7 +59,7 @@ To thoroughly validate the `get_matching_scholarships` function and demonstrate 
 * **Orders the results by `match_score` in descending order**, ensuring that the most relevant scholarships are presented first.
 * **Includes inline comments** indicating the expected number of matches for quick verification and debugging.
 
-
+---
 ### Assumptions and Future Ideas
 
 #### **Assumptions:**
