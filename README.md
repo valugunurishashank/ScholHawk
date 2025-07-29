@@ -1,0 +1,2 @@
+# ScholHawk
+Scholarship matching platform
