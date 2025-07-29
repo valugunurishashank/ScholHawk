@@ -49,6 +49,16 @@ These weighted contributions are summed to give the final match_score, with high
 
 Appropriate Row-Level Security (RLS) policies are configured on sensitive tables (e.g., `user_profiles`, `scholarships`) to ensure that users can only access data they are authorized. RLS is active and correctly enforced to prevent unauthorized data exposure or manipulation. For example, users can only view their own user_profiles record.
 
+### Testing
+To thoroughly validate the `get_matching_scholarships` function and demonstrate its behavior across various student profiles, a set of test queries has been developed. These tests directly invoke the function with specific user IDs and verify the returned scholarship matches and their calculated relevance scores.
+
+**Each test case:**
+* **Targets a distinct user profile**, simulating different student backgrounds and needs.
+* **Returns scholarships** that meet all the defined filtering criteria for that user.
+* **Orders the results by `match_score` in descending order**, ensuring that the most relevant scholarships are presented first.
+* **Includes inline comments** indicating the expected number of matches for quick verification and debugging.
+
+
 ### Assumptions and Future Ideas
 
 #### **Assumptions:**
