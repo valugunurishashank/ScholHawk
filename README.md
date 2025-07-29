@@ -8,6 +8,8 @@ At the core of ScholHawk are two primary, normalized tables: `user_profiles` for
 
 This schema is designed for **normalization**, minimizing data redundancy and ensuring data integrity. Using `UUID`s for IDs provides global uniqueness. `TEXT[]` for `tags` allows flexible multi-value storage and efficient array operations. Categorical fields are `Text` for flexibility.
 
+<img src="schema-viz.png" alt="ScholHawk Database Schema" width="900px">
+
 ### 2. Matching Logic
 
 The core of ScholHawk's intelligence lies in the PostgreSQL function: `get_matching_scholarships(p_user_id UUID)`. This function efficiently identifies and ranks relevant scholarships for a given student.
